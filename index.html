@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper container">
+                  <a href="#!" class="brand-logo">Recipe Food</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="topnav right hide-on-med-and-down">
+                    <!-- <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li> -->
+                  </ul>
+                </div>
+              </nav>
+        </div>
+      
+        
+          <ul class="sidenav" id="mobile-demo">
+            <!-- <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li> -->
+          </ul>
+          <div class="container" id="body-content"></div>
+             
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/navigation.js"></script>
+    
+      <script>
+        // REGISTER SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function() {
+            navigator.serviceWorker
+              .register("/service-worker.js")
+              .then(function() {
+                console.log("Pendaftaran ServiceWorker berhasil");
+              })
+              .catch(function() {
+                console.log("Pendaftaran ServiceWorker gagal");
+              });
+          });
+        } else {
+          console.log("ServiceWorker belum didukung browser ini.");
+        }
+      </script>
+    </body>
+  </html>
