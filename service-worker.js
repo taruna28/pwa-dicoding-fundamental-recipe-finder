@@ -1,4 +1,4 @@
-const CACHE_NAME = "firstpwa";
+const CACHE_NAME = "firstpwa9";
 var urlsToCache = [
   "/",
   "/navigation.html",
@@ -11,7 +11,7 @@ var urlsToCache = [
   "/js/materialize.min.js",
   "/js/navigation.js",
   "/img/chicken.jpg",
-  "img/BeefStroganoff.jpg"
+  "/img/BeefStroganoff.jpg"
 ];
  
 self.addEventListener("install", function(event) {
@@ -41,3 +41,17 @@ self.addEventListener("fetch", function(event) {
     );
   });
   
+  self.addEventListener("activate", function(event) {
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.map(function(cacheName) {
+            if (cacheName != CACHE_NAME) {
+              console.log("ServiceWorker: cache " + cacheName + " dihapus");
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+    );
+  });

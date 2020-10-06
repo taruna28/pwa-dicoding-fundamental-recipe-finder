@@ -1,0 +1,17 @@
+{
+    "name": "recipe food",
+    "short_name": "recipe food",
+    "description": "Aplikasi PWA recipe food",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#00897B",
+    "theme_color": "#00897B",
+    "icons": [
+        {
+            "src": "image.png",
+            "sizes": "444x444",
+            "type": "image/png"
+        }
+
+    ]
+}
