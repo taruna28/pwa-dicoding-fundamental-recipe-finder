@@ -1,4 +1,4 @@
-ganti api nya jangan pake api yg ini karena ada menu babinya haram
+ganti api nya jangan pake api yg ini karena ada menu babinya haram, latihan fundamental 
 
 <p align="center">
   <a href="http://materializecss.com/">
